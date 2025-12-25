@@ -24,6 +24,8 @@ func NewRequestHandler(config *Config) *RequestHandler {
 		handler.balancing_method = &algorithms.RoundRobin{}
 	case "ip_hashing":
 		handler.balancing_method = &algorithms.IPHashing{}
+	case "first":
+		handler.balancing_method = &algorithms.First{}
 	default:
 		handler.balancing_method = &algorithms.First{}
 	}
