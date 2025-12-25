@@ -8,7 +8,6 @@ import (
 )
 
 type IPHashing struct {
-	selected int
 }
 
 func (m *IPHashing) GetServer(server_list []string, request *http.Request) string {
